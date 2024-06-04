@@ -1,0 +1,26 @@
+use("platzi_store")
+db.orders.find()
+db.orders.aggregate
+(
+    [
+        {
+        $match : {
+            $and :[
+                {"date": "2020-12-12" } , 
+                {"items.price" : { $gte : 130}},
+                {
+                $or : [{
+                    "items.qty": 1 , "items.qty" : 2
+                }]
+                }
+            ]
+            
+        }
+        }, 
+        {
+            $project: {
+               _id : 0 , user_id : 0 
+            }
+        }
+    ]
+)

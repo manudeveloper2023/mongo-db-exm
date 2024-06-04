@@ -1,0 +1,18 @@
+use("platzi_store")
+
+db.orders.insertOne
+(
+    {
+        user_id :ObjectId("665e6fc62d326bf81fbb3773"),
+        date : '2020-12-13',
+        items:
+        [
+        
+            {
+                name : 'Polo',
+                price : 120 , 
+                qty :1
+            }
+        ]
+    }
+)

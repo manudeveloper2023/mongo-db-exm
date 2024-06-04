@@ -1,0 +1,8 @@
+use("platzi_store")
+
+db.orders.insertOne
+(
+    {
+        
+    }
+)

@@ -1,0 +1,21 @@
+use("platzi_store")
+
+db.users.insertOne
+(
+    {
+        email :"zule@gmail.com",
+        password : 'az213adasZAz123ASD1',
+        role :'customer',
+        social_accounts : ['twitter' , 'facebook'],
+        address: {
+            street : 'cr 891 ' , 
+            city : 'Bogota' , 
+            zip : '11011'
+        },
+        shipping_address: {
+            street : 'cr 23 12 ' , 
+            city : 'Bogota' , 
+            zip : '13011'
+        }
+    }
+)
